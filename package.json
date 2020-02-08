@@ -1,6 +1,6 @@
 {
-  "name": "get-started",
-  "version": "1.0.0",
+  "name": "create-kofujs-app",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
