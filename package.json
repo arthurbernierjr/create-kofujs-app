@@ -1,18 +1,18 @@
 {
   "name": "create-kofujs-app",
-  "version": "1.0.3",
-  "description": "",
+  "version": "1.0.4",
+  "description": "KofuJS a slightly opinionated and elegant JS framework",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["kofujs", "spa", "app-generator"],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^7.0.1"
   },
   "bin": {
-    "generate-kofujs": "./index.js"
+    "create-kofujs-app": "./index.js"
   }
 }
