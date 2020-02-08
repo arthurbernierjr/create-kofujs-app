@@ -3,7 +3,7 @@
 
 # To start
 1. run ``` npm i create-kofujs-app -g ```  will add the project globally onto your computer
-2. from the command line run ``` generate-kofujs ``` in the parent folder that you desire the project to be in.
+2. from the command line run ``` create-kofujs-app ``` in the parent folder that you desire the project to be in.
 3. You will select kofujs which is the only current template more to come soon
 4. It will ask your project name that will be the name of your folder
 5. Feel awesome
