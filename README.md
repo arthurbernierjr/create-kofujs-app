@@ -1,13 +1,11 @@
 # How to start the project
-  This project is made to allow you to have your own template generator locally
+  This project is made to allow you to have your own kofujs powered template generator locally for building SPA's and Universal Apps
 
 # To start
-1. clone the repository
-2. add any template that you want to the templates directory
-3. run ``` npm i create-kofujs-app -g ``` in the root of the project and it will add the project globally onto your computer
-4. from the command line run ``` generate-kofujs ``` in the parent folder that you desire the project to be in.
-5. You will select kofujs which is the only current template more to come soon
-6. It will ask your project name that will be the name of your folder
-7. Feel awesome
-8. Write your components in the src folder, don't delete templates
-NOTE KOFU JS STARTER COMMANDS ONLY WORK WITH YARN use NPM if you want and make prs for fixes if you desire.
+1. run ``` npm i create-kofujs-app -g ```  will add the project globally onto your computer
+2. from the command line run ``` generate-kofujs ``` in the parent folder that you desire the project to be in.
+3. You will select kofujs which is the only current template more to come soon
+4. It will ask your project name that will be the name of your folder
+5. Feel awesome
+6. Write your components in the src folder, don't delete templates
+7. In order to use app effectively you need to install ```yarn package manager``` and ```gulp-cli```  globally.  I also still love CoffeeScript so I use it from time to time in the source code, i am also thinking of integrating `typed coffee` and building on top of the great work that was done there. I will also be using ```Crystal Lang with Amber``` as the defacto backend and ```Koa``` as the default JS Full Stack Application.
