@@ -1,6 +1,6 @@
 {
   "name": "create-kofujs-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,6 @@
     "inquirer": "^7.0.1"
   },
   "bin": {
-    "generate": "./index.js"
+    "generate-kofujs": "./index.js"
   }
 }
