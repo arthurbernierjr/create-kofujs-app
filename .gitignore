@@ -1,0 +1,12 @@
+node_modules/
+templates/blk-react/
+templates/gaia-bootstrap/
+templates/light-dashboard-react/
+templates/material-react/
+templates/next-material/
+templates/now-ui-react/
+templates/nuxt-argon/
+templates/nuxt-now-ui/
+templates/paper-dashboard-react/
+templates/paper-kit-react/
+templates/vue-now-ui/
