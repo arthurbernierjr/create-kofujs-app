@@ -1,4 +1,5 @@
 # How to start the project
+![kofulogo](https://user-images.githubusercontent.com/38284764/74117680-78a4f980-4b86-11ea-9e8c-fc42cc1a676a.png)
   This project is made to allow you to have your own kofujs powered template generator locally for building SPA's and Universal Apps
 
 # To start
