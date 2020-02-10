@@ -11,4 +11,4 @@
 6. Write your components in the src folder, don't delete templates
 7. In order to use app effectively you need to install ```yarn package manager``` and ```gulp-cli```  globally.  I also still love CoffeeScript so I use it from time to time in the source code, i am also thinking of integrating `typed coffee` and building on top of the great work that was done there. I will also be using ```Crystal Lang with Amber``` as the defacto backend and ```Koa``` as the default JS Full Stack Application.
 
-### More Details: github.com/arthurbernierjr/kofujs
+### More Details: [__github.com/arthurbernierjr/kofujs__](https://github.com/arthurbernierjr/kofujs)
