@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 const inquirer = require('inquirer');
 const fs = require('fs');
+const exec = require('child_process').exec;
+const consola = require('consola');
 
 const CHOICES = fs.readdirSync(`${__dirname}/templates`);
 
@@ -35,7 +37,30 @@ const QUESTIONS = [
       const templatePath = `${__dirname}/templates/${projectChoice}`;
 
       fs.mkdirSync(`${CURR_DIR}/${projectName}`);
-      console.log('Now building project :)')
+      consola.info('Now building project just take a second to enjoy the process that is the kofu experience :)')
+      consola.info('How is your day going by the way ? Think about how awesome it is that you live in a world full of computers and you can code')
+      exec(`cd ${projectName } && npm install`, function (err, stdout, stderr ){
+        if (err) {
+          consola.error(`Dude heres your error: ${err}`)
+          consola.info(`These are warnings but they could help you also : ${stderr}`)
+          return;
+        }else {
+          consola.success(stdout);
+          consola.success('Looks like we built your Kofu Project inside the directory you suggested, you can scroll up and see your output and any NPM Warnings :) ')
+          consola.success(`It is finished.... well not really you still need to cd into the ${projectName} folder by running \n
+            --------->   cd ${projectName}    <---------`)
+          consola.success(`To help here is some useful info: \n
+            you need to make sure you have gulp and yarn globally \n
+            -----> npm i -g gulp-cli yarn <----- \n
+            to start the app you can run \n
+            ----> yarn watch <----- \n
+            you can hack the project yourself by editing  \n
+            ------------> .babelrc (controls babel), gulpfile.js (controls gulp), webpack.config.js (controls webpack) <--------------
+            `)
+            consola.success(`happy coding ....... `)
+          return;
+        }
+      })
       createDirectoryContents(templatePath, projectName);
     });
 

@@ -6,10 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["kofujs", "spa", "app-generator"],
+  "keywords": [
+    "kofujs",
+    "spa",
+    "app-generator"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "consola": "^2.11.3",
     "inquirer": "^7.0.1"
   },
   "bin": {

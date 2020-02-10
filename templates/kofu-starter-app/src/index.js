@@ -1,16 +1,15 @@
-import {
-  Komponent,
-  render
-} from "../../framework/lib/kofu-framework/index.js";
+import { Komponent , render} from 'kofujs'
+
+const styles = {
+  mainPageHeading: {
+    backgroundColor: 'red'
+  }
+}
 
 class Example extends Komponent{
   constructor (props)  {
     super (props)
-    const styles = {
-      mainPageHeading: {
-        backgroundColor: 'red'
-      }
-    }
+
     this.classes = this.setStyles(styles).classes
   }
 

@@ -35,7 +35,7 @@ gulp.task('default', cb => {
    consola.info('Front End Listening')
    consola.success('App Set Up')
 
-   gulp.watch('./src/example/**/*', gulp.task('build')).on('change', (file) => {
+   gulp.watch('./src/**/*', gulp.task('build')).on('change', (file) => {
      consola.success('Reloaded due to change')
      console.log(file)
      return reload()
@@ -59,7 +59,7 @@ End Default task
 gulp.task('coffee', cb => {
   gulp.src('./src/**/*.coffee')
     .pipe(coffee({bare: true}))
-    .pipe(gulp.dest('./framework/lib/'));
+    .pipe(gulp.dest('./lib/'));
   consola.success('Built from CoffeeScript to JavaScript');
   cb();
 })
