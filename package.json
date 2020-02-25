@@ -1,6 +1,6 @@
 {
   "name": "create-kofujs-app",
-  "version": "1.0.15",
+  "version": "1.0.20",
   "description": "KofuJS a slightly opinionated and elegant JS framework",
   "main": "index.js",
   "scripts": {
