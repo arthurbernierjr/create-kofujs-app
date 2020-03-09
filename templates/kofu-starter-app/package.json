@@ -10,7 +10,7 @@
     "watch": "gulp",
     "build:fw": "webpack --mode development --env.NODE_ENV=dev",
     "build:webpack": "webpack --mode production --env.NODE_ENV=prod",
-    "start": "npm run build:webpack && coffee deploy.coffee"
+    "start": "coffee deploy.coffee"
   },
   "keywords": [],
   "author": "",
