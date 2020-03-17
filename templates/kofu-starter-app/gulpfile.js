@@ -5,33 +5,37 @@ const browserSync = require("browser-sync").create()
 const reload = browserSync.reload
 const nodemon = require("gulp-nodemon")
 const exec = require('child_process').exec
-  const fs = require('fs');
+const fs = require('fs');
 
 /* Default Task Called when you run
 yarn watch or npm run watch
 */
 gulp.task('default', cb => {
   consola.info('Starting to build files')
-  exec('npm run build:fw', function(err, stdout, stderr) {
-		console.log(stdout);
-		console.log(stderr);
+  exec('yarn build:fw', function(err, stdout, stderr) {
+		consola.info(stdout);
+		consola.info(stderr);
+    if(err){
+    consola.error(err)
 		cb(err);
+    }
+    nodemon({
+      script: 'server.coffee',
+      env: { 'NODE_ENV': 'development'}
+    })
+    consola.success('Successfully Started Back End Server')
+
+    consola.info('Starting Front End')
+
+    browserSync.init({
+      proxy: {
+        target: 'http://localhost:8000',
+        ws: true
+      },
+      serveStatic: ['.', './public']
+    })
 	});
-  nodemon({
-    script: 'server.coffee',
-    env: { 'NODE_ENV': 'development'}
-  })
-  consola.success('Successfully Started Back End Server')
 
-  consola.info('Starting Front End')
-
-  browserSync.init({
-    proxy: {
-      target: 'http://localhost:8000',
-      ws: true
-    },
-    serveStatic: ['.', './public']
-  })
    consola.info('Front End Listening')
    consola.success('App Set Up')
 
@@ -83,18 +87,3 @@ gulp.task('start', cb => {
   consola.success('Awesome')
   cb();
 })
-
-// gulp.task('nodePackage', cb => {
-//   exec('yarn compile',  function(err, stdout, stderr) {
-//     console.log(stdout);
-//     console.log(stderr);
-//     cb(err);
-//   })
-// // destination.txt will be created or overwritten by default.
-// fs.copyFile('source.txt', 'destination.txt', (err) => {
-//   if (err) throw err;
-//   console.log('source.txt was copied to destination.txt');
-// });
-//   consola.success('Created you node package distro')
-//   cb();
-// })

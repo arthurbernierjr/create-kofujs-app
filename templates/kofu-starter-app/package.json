@@ -1,19 +1,27 @@
 {
   "name": "My-Super-Cool-Kofu-App",
   "version": "1.0.0",
+  "engines": {
+    "node": "13.10"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
     "watch": "gulp",
     "build:fw": "webpack --mode development --env.NODE_ENV=dev",
-    "build:webpack": "webpack --mode production --env.NODE_ENV=prod"
+    "build:webpack": "webpack --mode production --env.NODE_ENV=prod",
+    "start": "coffee deploy.coffee"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "coffeescript": "^2.4.1",
     "express": "^4.17.1",
     "kofujs": "^1.1.0-alpha",
+    "dotenv": "^8.2.0"
+    },
+  "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/plugin-proposal-decorators": "^7.7.4",
@@ -23,32 +31,16 @@
     "@babel/plugin-transform-react-jsx": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
     "babel-loader": "^8.0.6",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.26.7",
     "clean-webpack-plugin": "^0.1.0",
     "coffee-loader": "^0.9.0",
-    "coffeescript": "^2.4.1",
-    "color": "^3.1.2",
     "consola": "^2.11.2",
-    "dotenv": "^8.2.0",
     "gulp": "^4.0.2",
     "gulp-coffee": "^3.0.3",
     "gulp-nodemon": "^2.4.2",
     "html-webpack-plugin": "^3.2.0",
-    "jss": "^10.0.1",
-    "jss-preset-default": "^10.0.1",
-    "koa": "^2.11.0",
-    "koa-router": "^7.4.0",
-    "lodash.filter": "^4.6.0",
-    "lodash.map": "^4.6.0",
-    "lodash.reduce": "^4.6.0",
-    "mini-css-extract-plugin": "^0.9.0",
-    "nodemon": "^2.0.2",
-    "rxjs": "^6.5.3",
-    "snabbdom": "^0.7.4",
-    "vanilla-router": "^1.2.7",
     "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",
     "webpack-md5-hash": "^0.0.6"
