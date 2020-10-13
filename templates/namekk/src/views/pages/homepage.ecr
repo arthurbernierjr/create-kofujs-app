@@ -1,0 +1,9 @@
+<% content_for "head" do %>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+<% end %>
+<!-- <%= render "src/views/includes/navigation.ecr" %> -->
+<div id="app"></div>
+
+<% content_for "scripts" do %>
+  <script src=<%="js/main.#{item}.js"%>></script>
+<% end %>
